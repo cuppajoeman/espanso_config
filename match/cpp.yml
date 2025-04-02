@@ -1,0 +1,55 @@
+matches:
+
+  - trigger: ":cls"
+    replace: "class ClassName {\npublic:\n    $|$\n};"
+
+  - trigger: ":str"
+    replace: "struct StructName {\n    $|$\n};"
+
+  - trigger: ":if"
+    replace: "if ($|$) {\n    \n}"
+
+  - trigger: ":elif"
+    replace: "else if ($|$) {\n    \n}"
+
+  - trigger: ":else"
+    replace: "else {\n    $|$\n}"
+
+  - trigger: ":while"
+    replace: "while ($|$) {\n    \n}"
+
+  - trigger: ":for"
+    replace: "for ($|$) {\n    \n}"
+
+  - trigger: ":foreach"
+    replace: "for (auto& elem : $|$) {\n    \n}"
+
+  - trigger: ":fn"
+    replace: "ReturnType function_name($|$) {\n    \n}"
+
+  - trigger: ":lambda"
+    replace: "auto lambda = []($|$) {\n    \n};"
+
+  - trigger: ":var"
+    replace: "Type variable_name = $|$;"
+
+  - trigger: ":call"
+    replace: "function_name($|$);"
+
+  - trigger: ":switch"
+    replace: "switch ($|$) {\n    case value:\n        break;\n    default:\n        break;\n}"
+
+  - trigger: ":case"
+    replace: "case $|$:\n    break;"
+
+  - trigger: ":ret"
+    replace: "return $|$;"
+
+  - trigger: ":try"
+    replace: "try {\n    $|$\n} catch (const std::exception& e) {\n    std::cerr << e.what() << '\\n';\n}"
+
+  - trigger: ":cout"
+    replace: "std::cout << $|$ << std::endl;"
+
+  - trigger: ":cerr"
+    replace: "std::cerr << $|$ << std::endl;"
