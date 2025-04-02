@@ -1,4 +1,4 @@
-# espanso match file
+#espanso match file
 
 # For a complete introduction, visit the official docs at: https://espanso.org/docs/
 
@@ -9,7 +9,6 @@
 # it gets replaced by the "replace" string.
 matches:
 
-
   # enable math mode
   - trigger: ":em"
     replace: "{{output}}" 
@@ -17,7 +16,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "~/projects/toolbox/content/tool_configurations/espanso/espanso_match_file_manager.py enable math"
+          cmd: "python3 ~/.config/espanso/espanso_match_file_manager/main.py enable math"
 
   # disable math mode
   - trigger: ":qm"
@@ -26,7 +25,7 @@ matches:
       - name: output
         type: shell
         params:
-          cmd: "~/projects/toolbox/content/tool_configurations/espanso/espanso_match_file_manager.py disable math"
+          cmd: "python3 ~/.config/espanso/espanso_match_file_manager/main.py disable math"
 
 
   - trigger: ":espanso"
